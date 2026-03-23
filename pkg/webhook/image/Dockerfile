@@ -76,7 +76,7 @@ RUN case ${TARGETARCH} in \
 # Build the Node.js artifacts
 # The version is hardcoded in package.json and copied from the OTel Operator
 # TODO: Can we allow this to be configurable just like the JVM and .NET
-FROM node:20@sha256:65b74d0fb42134c49530a8c34e9f3e4a2fb8e1f99ac4a0eb4e6f314b426183a2 AS build-nodejs-sdk
+FROM node:24@sha256:5a593d74b632d1c6f816457477b6819760e13624455d587eef0fa418c8d0777b AS build-nodejs-sdk
 
 WORKDIR /operator-build
 COPY node.js/package.json .
